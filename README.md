@@ -88,19 +88,19 @@ Without consistent event-level records, a single event represented multiple time
 
 ### Event composition over time
 
-![Recorded event-type composition by year](assets/event_type_composition.png)
+![Recorded event-type composition by year](event_type_composition.png)
 
 *Recorded event-type composition by year, 2016–2023. Protests account for the largest share of the final analytical dataset.*
 
 ### Geographic distribution
 
-![Spatial distribution of recorded and fatal events in Turkey](assets/spatial_distribution.png)
+![Spatial distribution of recorded and fatal events in Turkey](spatial_distribution.png)
 
 *Locations of recorded events and events with at least one reported fatality. Recorded fatal events appear more concentrated in eastern and southeastern locations; the pattern is descriptive and may also reflect reporting coverage.*
 
 ### Fatality patterns by event type
 
-![Fatal event status by event type](assets/fatality_rates_by_event_type.png)
+![Fatal event status by event type](fatality_rates_by_event_type.png)
 
 *Fatal-event status varies markedly across ACLED event categories. Differences should be read together with the underlying event definitions.*
 
@@ -149,7 +149,7 @@ Additional EDA examined annual event counts and fatalities, province-level ranki
 
 **Interpretation:** Fatal events had somewhat broader **recorded** source coverage on average, but the shared median of one shows that most events in both groups were still associated with a single source. `source_count` is not a direct measure of media quality or total public attention.
 
-![Mean recorded reporting-source counts by fatality status](assets/reporting_coverage.png)
+![Mean recorded reporting-source counts by fatality status](reporting_coverage.png)
 
 ### RQ4 — Does population context differ by event type?
 
@@ -162,7 +162,7 @@ Additional EDA examined annual event counts and fatalities, province-level ranki
 
 **Interpretation:** Event categories differ in their observed geographic/population context; this does not imply that population size causes a particular event type.
 
-![Population proxy by recorded event type](assets/population_by_event_type.png)
+![Population proxy by recorded event type](population_by_event_type.png)
 
 ### RQ5 — Which characteristics are associated with reported fatalities?
 
@@ -198,9 +198,9 @@ All four predictors were statistically significant at the 5% level in the fitted
 - **Multicollinearity:** Predictor VIFs ranged from **1.011 to 1.408**, indicating no major multicollinearity concern in this specification.
 - **Outcome distribution:** Even after `log(1 + fatalities)`, the response remained strongly **zero-heavy**.
 
-![Residuals versus fitted values for multiple regression](assets/regression_residuals.png)
+![Residuals versus fitted values for multiple regression](regression_residuals.png)
 
-![Q-Q plot of multiple regression residuals](assets/regression_qq_plot.png)
+![Q-Q plot of multiple regression residuals](regression_qq_plot.png)
 
 **What the diagnostics mean:** HC3 improves the reliability of standard-error estimates under heteroskedasticity; it **does not** make residuals normal or solve the zero-heavy outcome. Accordingly, this model is presented as an **exploratory association model**, not a validated prediction system or a causal model.
 
@@ -229,7 +229,7 @@ These limitations are part of the analytical results, not afterthoughts: **stati
 
 ## 7. Source material and reproducibility
 
-The **analysis and numerical results in this README are drawn from the team's June 2026 STAT250 final project report**. The figures in `assets/` were extracted from that report, rather than recreated or modified with new data.
+The **analysis and numerical results in this README are drawn from the team's June 2026 STAT250 final project report**. The figures in `` were extracted from that report, rather than recreated or modified with new data.
 
 To reproduce the analysis independently, obtain the relevant ACLED data under its applicable access conditions and follow the transformations and test specifications described above. **This README package contains documentation and report figures, not the original event-level data or runnable analysis notebooks**; reproducibility would require the corresponding code, raw-data version, and software environment to be added to the repository.
 
